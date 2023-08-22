@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+.cabecalho{
+    width: 100%;
+    height: 10rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho .logo{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5rem 5rem;
+    background-color: lightblue;
+}
+
+.cabecalho .titulo{
+    
+}
+.cabecalho .menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.cabecalho a{
+    text-decoration: 0;
+    color: white;
+    font-size: 2rem;
+}
+
+.cabecalho .menu a {
+    padding: 0.5rem 1rem; /* Adapte os valores conforme necessário */
+}
