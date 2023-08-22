@@ -48,3 +48,8 @@ html{
 .cabecalho .menu a {
     padding: 0 1rem; /* Adapte os valores conforme necessário */
 }
+
+.cabecalho .logo a img{
+    max-width: 100%;
+    border-radius: 1rem;
+}
