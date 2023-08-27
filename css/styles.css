@@ -82,6 +82,16 @@ main {
     grid-row: 2; /* Ocupa a segunda linha */
     background-color: gold;
     padding: 20px; /* Adicione algum espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 3rem;
+}
+
+.oferta-do-dia img{
+    max-width: 20%;
+    border-radius: 2rem;
+
 }
 .frase-de-efeito p{
     margin: 1rem;
