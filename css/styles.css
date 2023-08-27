@@ -17,6 +17,8 @@ html{
     --cor-fundo: #daa520;
     --icone-tamanho: 200px;
     --icone-tamanho-menor: 150px;
+    --tamanho-largura-produto: 300px;
+    --tamanho-altura-produto: 250px;
 }
 .container{
     display: grid;
@@ -254,18 +256,79 @@ text-align: center;
     width: 150rem;
     border-radius: 1rem;
     height: 40rem;
+    gap: 3rem;
+    display: flex;
 }
 
 .produtos-recomendados::-webkit-scrollbar {
-    width: 1rem;
     background-color: var(--cor-principal);
+    height: 0.7rem;
 }
 
 .produtos-recomendados::-webkit-scrollbar-track {
-    background-color: #282828;
+    background-color: var(--cor-principal);
 }
 
 .produtos-recomendados::-webkit-scrollbar-thumb {
-    background-color: #57af33;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 
+.produto {
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.produto img {
+    width: var(--tamanho-largura-produto);
+    height: var(--tamanho-altura-produto);
+    margin-top: 1rem;
+}
+
+.produto a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#preco-produto {
+    font-size: 1.5rem;
+}
+
+.produto:hover {
+    background-color: #aaaaaa;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.produto img:hover {
+    width: 35rem;
+    height: 30rem;
+}
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 11;
+    background: linear-gradient(to right, var(--cor-principal), #2d588a);
+    color: var(--cor-texto);
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: var(--cor-texto);
+}
+
+
+.linha {
+    background-color: white;
+    width: 1px;
+    height: 13rem;
+}
