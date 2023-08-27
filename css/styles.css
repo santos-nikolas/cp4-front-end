@@ -250,7 +250,7 @@ text-align: center;
 .produtos-recomendados {
     background-color: var(--cor-principal);
     overflow-x: scroll;
-    max-width: 100%;
+    max-width: 150rem;
     width: 150rem;
     border-radius: 1rem;
     height: 40rem;
