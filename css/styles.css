@@ -85,13 +85,27 @@ main {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.oferta-do-dia .produto-promocao {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column; /* Ajusta o layout para coluna */
+    align-items: center; /* Centraliza na vertical */
+    gap: 1rem; /* Espaçamento entre os elementos */
 }
 
 .oferta-do-dia img{
-    max-width: 20%;
+    max-width: 100%;
+    height: 50vh;
     border-radius: 2rem;
+    margin-left: 2rem;
+}
 
+.oferta-do-dia .produto-promocao .preco-antigo{
+    font-size: 1.5rem;
+    color: rgb(243, 238, 238);
 }
 .frase-de-efeito p{
     margin: 1rem;
