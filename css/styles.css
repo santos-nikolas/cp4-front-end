@@ -10,30 +10,40 @@ html{
     font-size: 62.5%;
     font-family: 'Nunito', sans-serif;
 }
+
+:root {
+    --cor-principal: #1D3857;
+    --cor-texto: #fff;
+    --cor-fundo: #daa520;
+    --icone-tamanho: 200px;
+    --icone-tamanho-menor: 150px;
+}
 .container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* grid-auto-rows: 15rem; */
+    grid-auto-rows: 17rem;
 }
  .cabecalho{
-    background-color: black;
+    background: linear-gradient(to right, var(--cor-principal), #2d588a);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem; /* Adapte os valores conforme necessário */
     grid-column: 1 / 13;
-    /* grid-row: 1 / 2 */
-    height: 17vh;
+    /* grid-row: 1 / 13; */
+    /* height: 17rem; */
     gap: 5rem;
  }
-.cabecalho .logo{
-    width: 7rem;
-    height: 7rem;
-    border-radius: 5rem 5rem;
+    .logo img{
+    width: 12rem;
+    border-radius: 50%;
+    margin-left: 3rem;
 }
 
 .cabecalho .titulo{
-
+    font-size: 3rem;
+    color: var(--cor-texto);
+    text-shadow: 3px 3px var(--cor-fundo) ;
 }
 .cabecalho .menu{
     display: flex;
@@ -42,72 +52,220 @@ html{
 }
 
 .cabecalho .menu li a:hover{
-    background-color: rgb(100, 99, 99);
+    /* background-color: #172f49; */
+    background-color: var(--cor-fundo);
     border-radius: 1rem;
-}
-.cabecalho a{
-    text-decoration: 0;
-    color: white;
-    font-size: 2rem;
 }
 
 .cabecalho .menu a {
-    padding: 0 1rem; /* Adapte os valores conforme necessário */
+    padding: 1.5rem 3rem; /* Adapte os valores conforme necessário */
+    font-size: 2rem;
+    text-decoration: 0;
+    color: var(--cor-texto);
 }
-.cabecalho .logo a img{
-    max-width: 100%;
-    border-radius: 1rem;
-} 
 
 main {
-    grid-column: 1 / 13;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto; /* Três linhas automáticas */
+    grid-column: 1/13;
+    grid-row: 2 / 11;
     gap: 20px; /* Espaço entre as áreas */
+    background-color: var(--cor-fundo);
+}
+
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .frase-de-efeito {
-    grid-column: 3 / 11;
-    grid-row: 1; /* Ocupa a primeira linha */
-    justify-content: center;
-    background-color: skyblue;
-    align-items: center;
+    background-color: var(--cor-principal);
     border-radius: 5rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    width: 48%;
+    height: 5rem;
+    color: var(--cor-texto);
+}
+
+.frase-de-efeito p{
+    margin: 1rem;
+    font-size: 1.22vw;
+    font-weight: bold;
 }
 
 .oferta-do-dia {
-    grid-column: 1 / 13;
-    grid-row: 2; /* Ocupa a segunda linha */
-    background-color: gold;
+    margin-top: 2rem;
+    background-color: var(--cor-principal);
     padding: 20px; /* Adicione algum espaçamento interno */
     display: flex;
-    justify-content: space-between;
-    color: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: spa; */
+    color: var(--cor-texto);
     font-size: 4rem;
-}
-
-.oferta-do-dia .produto-promocao {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column; /* Ajusta o layout para coluna */
-    align-items: center; /* Centraliza na vertical */
-    gap: 1rem; /* Espaçamento entre os elementos */
+    font-weight: bold;
+    width: 150rem;
+    border-radius: 1rem;
 }
 
 .oferta-do-dia img{
     max-width: 100%;
-    height: 50vh;
+    width: 22rem;
+    height: 40rem;
     border-radius: 2rem;
     margin-left: 2rem;
+    position: relative;
+    top: -10rem;
+    left: 35rem;
 }
 
-.oferta-do-dia .produto-promocao .preco-antigo{
+.oferta-do-dia .produto-promocao {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    
+}
+
+#especificacoes {
     font-size: 1.5rem;
-    color: rgb(243, 238, 238);
+    width: 60rem;
+    font-weight: lighter;
+    position: relative;
+    top: 4rem;
 }
-.frase-de-efeito p{
-    margin: 1rem;
-    font-size: 2.3rem;
+
+#comprar-agora {
+    background-color: var(--cor-fundo);
+    border-radius: 20px;
+    font-size: 2rem;
+    height: 3rem;
+    padding: 0.2rem;
+    width: 14rem;
+    position: relative;
+    top: 30rem;
+    font-weight: lighter;
+    color: var(--cor-texto);
+    text-decoration: none;
 }
+
+#comprar-agora:hover {
+    background-color: #a17a18;
+    font-weight: bold;
+}
+
+#validade {
+    font-size: 1.5rem;
+    position: relative;
+    top: 38rem;
+    left: -5.5rem;
+    height: 1rem;
+}
+
+#preco-antigo{
+    font-size: 1.5rem;
+    color: rgb(209, 209, 209);
+    text-decoration: line-through;
+    position: relative;
+    top: 32rem;
+    left: 9.7rem;
+    height: 2rem;
+}
+#celular-promocao {
+    font-size: 3rem;
+}
+
+#preco-novo{
+    font-size: 2rem;
+    position: relative;
+    top: 34rem;
+    left: 19.3rem;
+    height: 2rem;
+}
+
+.nossas-ofertas {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.nossas-ofertas img {
+    width: var(--icone-tamanho);
+    max-width: 100%;
+}
+
+.icone-smartphones,
+.icone-tablets,
+.icone-notebooks,
+.icone-acessorios,
+.icone-relogios {
+    background-color: var(--cor-principal); 
+    font-size: 2rem;
+    max-width: 100%;
+    width: 25rem;
+    /* height: 20rem; */
+    display: flex;
+    justify-content: center;
+    border-radius: 3rem;
+}
+
+.icone-smartphones p,
+.icone-tablets p,
+.icone-notebooks p,
+.icone-acessorios p,
+.icone-relogios p {
+text-align: center;
+}
+
+.nossas-ofertas a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+.icone-smartphones:hover,
+.icone-tablets:hover,
+.icone-notebooks:hover,
+.icone-acessorios:hover,
+.icone-relogios:hover {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 35rem;
+}
+.icone-acessorios {}
+
+#titulo {
+    font-size: 5rem;
+    color: var(--cor-texto);
+    text-align: center;
+    text-shadow: 4px 4px var(--cor-principal);
+    margin-top: 3rem;
+    
+}
+
+.container-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produtos-recomendados {
+    background-color: var(--cor-principal);
+    overflow-x: scroll;
+    max-width: 100%;
+    width: 150rem;
+    border-radius: 1rem;
+    height: 40rem;
+}
+
+.produtos-recomendados::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--cor-principal);
+}
+
+.produtos-recomendados::-webkit-scrollbar-track {
+    background-color: #282828;
+}
+
+.produtos-recomendados::-webkit-scrollbar-thumb {
+    background-color: #57af33;
+}
+
