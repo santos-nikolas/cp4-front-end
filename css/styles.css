@@ -9,6 +9,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -17,6 +18,8 @@ html{
     --cor-fundo: #daa520;
     --icone-tamanho: 200px;
     --icone-tamanho-menor: 150px;
+    --tamanho-largura-produto: 300px;
+    --tamanho-altura-produto: 250px;
 }
 .container{
     display: grid;
@@ -41,7 +44,7 @@ html{
 }
 
 .cabecalho .titulo{
-    font-size: 3rem;
+    font-size: 6.5rem;
     color: var(--cor-texto);
     text-shadow: 3px 3px var(--cor-fundo) ;
 }
@@ -66,7 +69,7 @@ html{
 
 main {
     grid-column: 1/13;
-    grid-row: 2 / 11;
+    grid-row: 2 / 13;
     gap: 20px; /* Espaço entre as áreas */
     background-color: var(--cor-fundo);
 }
@@ -202,7 +205,7 @@ main {
     background-color: var(--cor-principal); 
     font-size: 2rem;
     max-width: 100%;
-    width: 25rem;
+    width: 28rem;
     /* height: 20rem; */
     display: flex;
     justify-content: center;
@@ -233,7 +236,7 @@ text-align: center;
 .icone-acessorios {}
 
 #titulo {
-    font-size: 5rem;
+    font-size: 6rem;
     color: var(--cor-texto);
     text-align: center;
     text-shadow: 4px 4px var(--cor-principal);
@@ -250,22 +253,446 @@ text-align: center;
 .produtos-recomendados {
     background-color: var(--cor-principal);
     overflow-x: scroll;
-    max-width: 100%;
+    max-width: 150rem;
     width: 150rem;
     border-radius: 1rem;
     height: 40rem;
+    gap: 3rem;
+    display: flex;
+    margin-top: 2rem;
 }
 
 .produtos-recomendados::-webkit-scrollbar {
-    width: 1rem;
     background-color: var(--cor-principal);
+    height: 0.7rem;
 }
 
 .produtos-recomendados::-webkit-scrollbar-track {
-    background-color: #282828;
+    background-color: var(--cor-principal);
 }
 
 .produtos-recomendados::-webkit-scrollbar-thumb {
-    background-color: #57af33;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 
+.produto {
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.produto img {
+    width: var(--tamanho-largura-produto);
+    height: var(--tamanho-altura-produto);
+    margin-top: 1rem;
+}
+
+.produto a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#preco-produto {
+    font-size: 1.5rem;
+}
+
+.produto:hover {
+    background-color: #aaaaaa;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.produto img:hover {
+    width: 35rem;
+    height: 30rem;
+}
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 13;
+    background: linear-gradient(to right, var(--cor-principal), #2d588a);
+    color: var(--cor-texto);
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: var(--cor-texto);
+}
+
+
+.linha {
+    background-color: white;
+    width: 1px;
+    height: 13rem;
+}
+
+@media screen and (max-width: 1545px) {
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+    width: 25rem;
+}
+}
+
+@media screen and (max-width: 1514px) {
+    .produtos-recomendados {
+        width: 130rem;
+    }
+}
+
+@media screen and (max-width: 1485px) {
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 28rem;
+    }
+}
+
+@media screen and (max-width: 1415px) {
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+    width: 23rem;
+    }
+}
+
+
+
+@media screen and (max-width: 1384px) {
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 20rem;
+    }
+
+    .produtos-recomendados {
+        width: 120rem;
+    }
+
+    .frase-de-efeito p{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1240px) {
+    nav {
+        display: none;
+    }
+
+    .container-menu-mobile {
+        margin-right: 2rem;
+    }
+
+    .linha1-menu {
+        background-color: #fff;
+        width: 7rem;
+        height: 2px;
+        margin-bottom: 1.3rem;
+    }
+
+    .linha2-menu {
+        background-color: #fff;
+        margin-top: 0.7rem;
+        width: 7rem;
+        height: 2px;
+        margin-bottom: 1.3rem;
+    }
+
+    .linha3-menu {
+        background-color: #fff;
+        margin-top: 0.7rem;
+        width: 7rem;
+        height: 2px;
+    }
+}
+
+@media screen and (max-width:1283px) {
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 25rem;
+}
+
+    #titulo {
+        font-size: 5rem
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .produtos-recomendados {
+        width: 110rem;
+    }
+
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+    width: 18rem;
+}
+}
+
+@media screen and (max-width: 1115px) {
+    .produtos-recomendados {
+        width: 95rem;
+    }
+
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 20rem;
+}
+}
+
+@media screen and (max-width: 1060px) {
+    .produtos-recomendados {
+        width: 95rem;
+    }
+
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 965px) {
+    .produtos-recomendados {
+        width: 85rem;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .produtos-recomendados {
+        width: 85rem;
+    }
+    
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 13rem;
+    }
+
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 18rem;
+    }
+    
+    #especificacoes{
+        width: 25rem;;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .produtos-recomendados {
+        width: 75rem;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 15rem;
+    font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+    .produtos-recomendados {
+        width: 65rem;
+    }
+
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 10rem;
+        font-size: 1rem;
+    }
+
+    .icone-smartphones:hover,
+    .icone-tablets:hover,
+    .icone-notebooks:hover,
+    .icone-acessorios:hover,
+    .icone-relogios:hover {
+    width: 13rem;
+}
+}
+
+@media screen and (max-width: 725px){
+    .oferta-do-dia {
+        height: 85rem;
+    } 
+    
+    .oferta-do-dia img {
+        width: 15rem;
+        height: 30rem;
+    }
+
+    #validade {
+        top: 48rem;
+        left: -19rem;
+    }
+    
+    #preco-antigo{
+        top: 41rem;
+        left: -2rem;
+
+    }
+    
+    #preco-novo{
+        top: 44rem;
+        left: 7rem;
+
+    }
+
+    #comprar-agora {
+        top: 65rem;
+    }
+
+    .produto-promocao img {
+        position: relative;
+        left: 20rem;
+        top: 10rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .frase-de-efeito p{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 655px){
+    .produtos-recomendados {
+        width: 55rem;
+    }
+
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 8rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 655px) {
+
+    #validade {
+        top: 18rem;
+        left: -18rem;
+    }
+    
+    #preco-antigo{
+        top: 41rem;
+        left: -26rem;
+
+    }
+    
+    #preco-novo{
+        top: 44rem;
+        left: -17rem;
+
+    }
+
+    .produto-promocao img {
+        position: relative;
+        left: -5rem;
+        top: 10rem;
+    }
+
+    .cabecalho .titulo{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .produtos-recomendados {
+        width: 45rem;
+    }
+
+    .icone-smartphones,
+    .icone-tablets,
+    .icone-notebooks,
+    .icone-acessorios,
+    .icone-relogios {
+        width: 6rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .frase-de-efeito p{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .cabecalho .titulo{
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 1485px) {
+        .icone-smartphones:hover,
+        .icone-tablets:hover,
+        .icone-notebooks:hover,
+        .icone-acessorios:hover,
+        .icone-relogios:hover {
+        width: 10rem;
+        font-size: 1.5rem;
+        }
+
+        .produtos-recomendados {
+            width: 35rem;
+        }
+}
+}
